@@ -1,0 +1,720 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/******************************************************/
+/*                                                    */
+/* Feuille de style pour la page d'incrustation vidéo */
+/*                                                    */
+/******************************************************/
+
+
+body
+{
+	background-color: rgba(0,0,0,0);	/* Fond blanc avec transparence totale */
+	xbackground-image: url("../images/illustrations/51371728431_bf78302f90_o.jpg");
+	xbackground-size:cover;
+	font-family: Arial, Helvetica, sans-serif; 
+}
+
+#ecran
+{
+}
+
+/* On cache le voyant de MAJ de la page */
+#animrefresh
+{
+	visibility: hidden;
+}
+
+/* On cache le Warning d'erreur de MAJ si déconnexion */
+#erreurcnx
+{
+	visibility: hidden;
+}
+
+
+
+/****************************++*********/
+/* Styles du Chronomètre des Suivi-tv  */
+/***************************************/
+
+/* On déplace le bloc en bas à gauche */
+div.tv-chrono
+{
+	position: fixed ;	
+	bottom: 40px;
+	left: 30px;
+	
+	z-index:1;
+	xborder: 2px solid yellow;
+}
+
+/* Style du conteneur Chrono*/
+div.chrono
+{
+	padding-top: 0;
+
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	xborder: 2px solid yellow;
+	
+	/* CSS3 */
+	 box-shadow: DimGray 0px 0px 10px 2px;	/* Ombrage des boites : Color, Dec.Horz, Dec.Vert, Flout., Elarg. */
+}
+
+
+table.chrono
+{  
+	display:inline-table;
+	margin: 0px 0px 0px 0px;
+	padding: 2px 0px 0px 2px;
+	vertical-align: top;	/* Pour IE */
+
+	font-size: 16px; 
+	color: MidnightBlue;
+	background-color: LightGray;
+
+	overflow: hidden;
+	table-layout: fixed; 
+	text-align:left;
+	
+	border-collapse: collapse;
+	xborder-spacing: 0px;
+	
+	border: none ; 
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	xborder-width: 0px;
+	xborder-color: White DarkGray LightGray White;
+	
+}
+
+
+
+/* On agrandi la colonne pour éviter le scrolling */
+div.SUIVITV #colonne_1
+{
+	xborder: 1px solid blue;
+	height:900px;
+	
+}
+
+
+
+
+/* Style par défaut des lignes */
+table.chrono	tr
+{  
+	font-weight: bold; 
+	white-space: nowrap;
+	line-height: 24px;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.4);		/* Ombrage vertical*/
+}
+
+table.chrono	tr
+{  
+}
+
+table.chrono	th
+{
+	overflow: hidden;	/* On masque les élements qui dépassent des tailles imposées */
+}
+table.chrono	td
+{
+	overflow: hidden;			/* On masque les élements qui dépassent des tailles imposées */
+	xtext-shadow: 0 1px 0 #aaa;	/* Léger relief des lettres */
+	xoutline: 1px red solid;	/* Visualisation des limite de champs (DEBUG) */
+}
+
+
+/* Style des lignes en fonction du status */
+
+table.chrono	tr.ligne_entete
+{  
+	font-size: 90%;
+	line-height: 20px;
+	color: #fde8ec;	
+	xtext-shadow: 1px 1px 0 #ccc;	/* Léger relief des lettres */
+	background-image: linear-gradient( #f2738c,#bb1133 );	/* Dégradé rouge */
+	background-color: #bb1133;
+	xbackground-image: linear-gradient( #6facd5,#497bae );	/* Dégradé bleu */
+	xbackground-color: #6facd5;
+}
+
+table.chrono	tr.pied
+{
+	line-height: 20px;
+	text-align: center;
+	font-size: 90%;
+	color: #fde8ec;	
+	background-image: linear-gradient( #f2738c,#bb1133 );	/* Dégradé rouge */
+	background-color: #bb1133;
+	xline-height: 0px;
+	xheight:0px;
+}
+table.chrono	td.pied
+{
+	xpadding: 1px 0px 0px 0px;
+}
+
+/* Ligne si coureur en course (poste non pointé) */
+table.chrono	tr.encourse 
+{  
+	background: linear-gradient(#d3f8d3, #65e765 );		/* Vert  dégradé */
+	background-color: #65e765;	/* Vert */
+}
+
+/* Ligne si coureur suivi */
+table.chrono	tr.select 
+{  
+	background-image: linear-gradient( LemonChiffon ,#fbef7e );	/* Dégradé jaune clair */
+	background-color: #fbef7e;
+}
+
+/* Ligne des 1er, précédent, suivant */
+table.chrono	tr.supplement 
+{
+	background-image: linear-gradient(#f0f0f0,#ddd );		/* Gris clair dégradé */
+	background-color: #ddd ;						/* Couleur si dégradé non pris en charge */
+}
+
+/* Ligne des Non-Classés */
+table.chrono	tr.nc 
+{
+	xbackground-image: linear-gradient( #f2738c,#bb1133 );	/* Dégradé rouge */
+	xbackground-color: #bb1133;
+	xbackground-image: linear-gradient( #6facd5,#497bae );	/* Dégradé bleu */
+	xbackground-color: #6facd5;
+	background-image: linear-gradient(#f0f0f0,#ddd );		/* Gris clair dégradé */
+	background-color: #ddd ;						/* Couleur si dégradé non pris en charge */
+	color: darkred;
+}
+
+
+/* Ligne si poste pointé d'un autre catégorie */
+table.chrono	tr.pointe 
+{
+	background: linear-gradient(#f0f0f0,#ddd );		/* Gris clair dégradé */
+	background-color: #ddd ;						/* Couleur si dégradé non pris en charge */
+	color: dimgray;
+}
+
+
+
+
+	
+table.chrono tr.pointe	td.place
+{
+	font-size: 80%;
+}
+
+table.chrono	td.place
+{
+	width: 30px;
+	text-align: right;
+	font-size: 110%;
+	padding-right: 10px;
+}
+
+table.chrono	td.dossard
+{
+	width: 30px;
+	text-align: center;
+	font-size: 90%;
+	xpadding-right: 10px;
+	xbackground-color: white;
+	color : dimgray;
+	xmargin : 2px 2px 2px 2px;
+	text-shadow: none;
+}
+	
+table.chrono	td.drapeau
+{
+	text-align: center;
+	width: 25px;
+}
+
+table.chrono	td.coureur
+{
+	width: 60px;
+	padding-left:  4px;
+	padding-right: 4px;
+	width: 160px;
+	max-width: 160px;
+}
+	
+table.chrono	td.temps_coureur ,
+table.chrono	td.ecart_premier
+{
+	width: 60px;
+	text-align: right;
+	padding-right: 10px;
+	xfont-size: 90%;
+}
+
+/* Temps coureur lorsque En Course */
+table.chrono tr.encourse	td.temps_coureur,
+table.chrono tr.encourse	td.ecart_premier
+{
+	color: Green;
+	font-style: italic;
+	xtext-shadow: 0 1px 0 #c99;	/* Léger relief des lettres */
+}
+
+/* Temps coureur lorsque PM */
+table.chrono tr.status_nc	td.temps_coureur,
+table.chrono tr.status_nc	td.ecart_premier
+{
+	color: DarkRed;
+	text-shadow: 0 1px 0 #c99;	/* Léger relief des lettres */
+}
+
+table.chrono	td.categorie
+{
+	border-right: 2px solid white;
+	padding-right: 2px;
+}
+	
+table.chrono	td.club
+{
+	width: 110px;
+	max-width: 110px;
+	font-size: 90%;
+	padding-left:  10px;
+	padding-right: 10px;
+}
+	
+	
+
+
+/* Pied de l'affichage */
+table.chrono	td.categorie
+{
+	min-width: 160px;
+}
+table.chrono	td.poste
+{
+	min-width: 160px;
+}
+
+
+/* Si le dossard est surveillé */ 
+
+	table.chrono tr.surveiller td.coureur
+	{  
+		background-image: url("../images/Voyant Jaune.gif");
+		xbackground-image: url("../images/AlerteJaune.png");
+		background-size: 14px 14px;
+		background-repeat: no-repeat;
+		background-position: right;
+		xbackground-color: yellow; 
+	}
+
+	table.chrono tr.voyant1 td.coureur
+	{  
+		background-image: url("../images/Voyant Rouge.gif");
+		background-size: 12px 12px;
+		background-repeat: no-repeat;
+		background-position: right;
+		padding: 0 0 0 0;
+	}
+
+	table.chrono tr.voyant2 td.coureur
+	{  
+		background-image: url("../images/Voyant Jaune.gif");
+		background-size: 12px 12px;
+		background-repeat: no-repeat;
+		background-position: right;
+		padding: 0 0 0 0;
+	}
+
+	table.chrono tr.voyant3 td.coureur
+	{  
+		background-image: url("../images/Voyant Vert.gif");
+		background-size: 12px 12px;
+		background-repeat: no-repeat;
+		background-position: right;
+		padding: 0 0 0 0;
+	}
+
+
+/*------------------------------------*/
+/* Styles pour la fiche infos coureur */
+/*------------------------------------*/
+
+/* Positionnement */
+div.bloc_suivitv div.tv-fiche
+{
+	padding-top: 0;
+
+	position: fixed ;	
+	bottom: 40px;
+	left: 30px;
+	
+}
+
+/* Style par défaut */
+div.fiche-infos  
+{
+	min-width: 200px;
+	height: 140px;
+	
+	margin: 10px 10px 10px 10px;
+	overflow: hidden;			/* On masque les élements qui dépassent des tailles imposées */
+	white-space: nowrap;		/* Jamais de retour à la ligne */
+	
+	text-align: left;
+	font-size: 16px;
+	padding: 10px 10px 10px 10px;
+	width: 95%;
+	
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	z-index:1;
+	border: 2px solid black;
+
+	background-image: linear-gradient( #ddd,#bbb );
+	background-color: lightgray;
+	box-shadow: DimGray 3px 3px 10px 2px;	/* Ombrage des boites : Color, Dec.Horz, Dec.Vert, Flout., Elarg. */
+	
+}
+
+div.fiche-infos span 
+{
+	font-weight: bold;
+}
+
+div.fiche-infos div.dossard
+{
+	margin-bottom: 6px;
+} 
+
+div.fiche-infos div.nom ,
+div.fiche-infos div.prenom 
+{
+	text-align: left;
+	font-size: 130%;
+	display: inline;
+	padding-left: 10px;
+	padding-right: 5px;
+	color: darkred;
+}
+
+div.fiche-infos div.club
+{
+	margin-top: 6px;
+} 
+
+div.fiche-infos div.depart
+{
+	margin-top: 6px;
+	
+} 
+
+
+
+/*-------------------------------------------------*/
+/* Styles pour les résultats et listes des départs */
+/*-------------------------------------------------*/
+
+/* Centrage des blocs de résultats dans l'écran */
+#ecran
+{
+	text-align:center;
+	width: 100%;	
+}
+
+
+
+table.tableau_indiv
+{  
+	xdisplay:inline-table;
+	margin: 6px 3px 3px 6px;
+	padding: 0px 0px 0px 0px;
+	vertical-align: top;	/* Pour IE */
+
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 16px; 
+	color: MidnightBlue;
+	background-color: #ddd;
+
+	border-collapse: collapse;
+	
+	border: none ; 
+	border-width: 0px;
+	border-color: White DarkGray LightGray White;
+	border-radius: 10px;
+	
+	/* CSS3 */
+	 xbox-shadow: DimGray 0px 0px 10px 2px;	/* Ombrage des boites : Color, Dec.Horz, Dec.Vert, Flout., Elarg. */
+	 box-shadow: none;
+}
+
+
+
+/* Style par défaut des lignes */
+table.tableau_indiv	tr
+{  
+	xfont-weight: bold; 
+	xwhite-space: nowrap;
+	line-height: 24px;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.4);		/* Ombrage vertical*/
+	background: linear-gradient(#f0f0f0,#ddd );		/* Gris clair dégradé */
+	background-color: #ddd ;						/* Couleur si dégradé non pris en charge */
+	font-weight: bold;	/* Toujours en gras */
+}
+
+table.tableau_indiv	tr.ligne_entete
+{
+	text-align: center;
+	xfont-size: 90%;
+	color: #fde8ec;	
+	background-image: linear-gradient( #f2738c,#bb1133 );	/* Dégradé rouge */
+	background-color: #bb1133;
+}
+
+table.tableau_indiv tr.limite	/* Ligne de séparation pour les classés/qualif */
+{  
+	border-style: solid none none none;		
+	border-width: 2px;
+	border-color: red;
+	Xbackground: yellow; 
+}
+
+table.tableau_indiv tr.recent1,		/* Pas de surlignage des récent pour les TV */
+table.tableau_indiv tr.recent2	
+{
+	background: linear-gradient(#f0f0f0,#ddd );		/* Gris clair dégradé */
+	background-color: #ddd ;						/* Couleur si dégradé non pris en charge */
+}
+
+table.tableau_indiv	td	
+{
+	overflow: hidden;
+	xoutline: 1px solid red;	/* Pour debug */
+}
+
+table.tableau_indiv	form	/* Masquage du bouton */
+{
+	xvisibility:hidden;
+	display: none
+}
+
+table.tableau_indiv	th.libelle_club
+{
+	Xcolor: #bb1133;	/* Rouge*/
+}
+
+table.tableau_indiv	td.place
+{
+	min-width: 30px;
+	text-align: center;
+	color: black;
+}
+
+table.tableau_indiv	td.dossard
+{
+	max-width: 0px;
+	overflow: hidden;
+	padding: 0 0 0 0;
+}
+
+table.tableau_indiv	td.libelle_coureur
+{
+	min-width: 200px;
+	max-width: 200px;
+}
+
+table.tableau_indiv	td.libelle_club
+{
+	min-width: 80px;
+	max-width: 80px;
+	padding-left: 5px;
+	font-size: 80%;
+}
+
+table.tableau_indiv	td.temps
+{
+	min-width: 60px;
+	max-width: 60px;
+	padding-right: 10px;
+	text-align: right;
+}
+
+table.tableau_indiv	th.status ,
+table.tableau_indiv	td.status
+{
+	xvisibility: hidden;	/* On cache les statuts normaux */
+	xfont-size: 10px;
+	display: none;
+}
+
+table.tableau_indiv	tr.NC td.status
+{
+	xvisibility: visible;	/* On affiche les status NB,PM,...*/
+	xfont-size: 12px;
+}
+
+
+/*----------------------------------------------------*/
+/* Styles pour le bandeau d'informations de l'épreuve */
+/*----------------------------------------------------*/
+
+div.bloc_suivitv 
+{
+	xdisplay: inline-block;
+	xoutline: 2px solid red;
+}
+
+div.bloc_suivitv div.tv-bandeau
+{
+	/* Place réservée */
+	width: 100%;
+	height: 60px;
+	padding: 10px 40px 10px 10px ;
+	xborder: 2px solid green;
+}
+
+div.bloc_suivitv div.bandeau
+{
+	/* Fond du bandeau */
+	width: 560px;
+	height: 50px;
+	xmargin-top: 10px;
+	padding-top: 5px  ;
+	display: inline-block;	/* Pour centrage par rapport au conteneur */
+	
+	color: white;
+	xbackground-image: linear-gradient( #f2738c,#bb1133 );	/* Rouge */
+	background-image: linear-gradient( #ffef7c,#fee101 );	/* Jaune */
+	background-color: #fee101;
+	
+	border-radius: 35px;
+	-moz-border-radius: 35px;
+	-webkit-border-radius: 35px;
+	z-index:1;
+	xborder: 2px solid black;
+
+	box-shadow: DimGray 3px 3px 10px 2px;	/* Ombrage des boites : Color, Dec.Horz, Dec.Vert, Flout., Elarg. */
+	text-shadow: 0 1px 1px #194b7e;			/* Relief des textes */
+}
+
+.titre
+{
+	xoutline: 1px solid green;
+	
+	font-family: Arial;
+	font-size: 22px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+#titre1
+{
+	color: black;
+}
+
+#titre2
+{
+	font-size: 20px;
+	xcolor: lightgray;	/* Gris */
+	color: #ff6c05;		/* Orange CNE*/
+}
+
+#logo-bandeau
+{
+	background-image: url("../images/CNE/logo-sud-o-week.gif");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 10px;
+	right:10px;
+	width: 100px;
+	height: 100px;
+	
+}
+
+/*----------------------------------------------------*/
+/* Styles des titres de liste de départ et résultats  */
+/*----------------------------------------------------*/
+
+div.titre_departs,
+div.titre_resultats
+{
+	padding: 3px 0px 3px 0px;
+	margin: 0px 5px 0px 5px;
+	
+	color: white;
+	background-image: linear-gradient( #f2738c,#bb1133 );
+	background-color: bb1133;
+	
+	font-family: arial;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #194b7e;
+	
+	border-radius: 35px;
+	-moz-border-radius: 35px;
+	-webkit-border-radius: 35px;
+	z-index:1;
+	xborder: 2px solid black;
+
+	xbox-shadow: DimGray 3px 3px 10px 2px;	/* Ombrage des boites : Color, Dec.Horz, Dec.Vert, Flout., Elarg. */
+}
+
+div.tv-start th.temps
+{
+	font-size: 0px;
+}

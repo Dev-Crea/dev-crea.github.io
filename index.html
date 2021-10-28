@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class=" nifcwsmmuc idc0_332"><head lang="fr">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=100">
+	<meta http-equiv="pragma" content="no-cache">
+	<title>Incrustation TV Finale / 11:45:55</title>
+<!--	<meta http-equiv="X-UA-Compatible" content="IE=8" /> -->
+<!--	<meta http-equiv="refresh" content="30"> -->
+
+	<link rel="stylesheet" href="index_fichiers/admin.css" type="text/css">
+	
+<link rel="SHORTCUT ICON" href="https://olive.orun.app/olive/images/Olive-1.ico"> 
+ <link rel="stylesheet" href="index_fichiers/status.css" type="text/css">
+<link rel="stylesheet" href="index_fichiers/Suivi-TV.css" type="text/css">
+<link rel="stylesheet" href="index_fichiers/classement_commun.css" type="text/css">
+<link rel="stylesheet" href="index_fichiers/jquery-ui.css">
+<script src="index_fichiers/jquery.js"></script>
+<script src="index_fichiers/jquery-ui.js"></script>
+<script src="index_fichiers/auto.js"></script>
+	<script>
+		function fct_affiche_infos($id)
+		{
+			var $bloc = document.getElementById($id);
+			// alert('bloc : '+$bloc.innerHTML);
+			var $infos = $bloc.getElementsByClassName('infos_passages');
+			// alert('Infos : '+$infos[1].innerHTML);
+			if ($infos[0].style.display != "block")
+				$infos[0].style.display = "block";
+			else
+				$infos[0].style.display = "none";
+		}
+	</script>
+	
+</head>
+<body>
+
+
+<div id="boutons"><button id="btn_maj" title="Lance le raffraichissement de la page">MAJ</button><button id="btn_stop" title="Stoppe les timers de MAJ">Stop Timer</button><button id="btn_timer" title="Active les timers de MAJ">Start Timer</button><button id="btn_hide" title="Efface ce bloc">Masquer</button><button id="btn_affpub" title="Affiche les pages de pubs">Aff. Pubs</button><button id="btn_chgpub" title="Passe à la pub suivante">Pub suiv.</button><button id="btn_scroll" title="Lance le scroll dépassant la page">Scroll</button><button id="btn_config" title="Retour à la page de choix d'une configuration" onclick="javascript:document.location.href='auto.php';">Autre config.</button></div><div id="masque"><div class="formulaire"><form method="POST" name="FormChoixModifConfig" id="FormChoixModifConfig"><div><div id="parametres">Configuration écran : <select name="IdConfig" id="IdConfig" class="center"><option value="-"></option><option value="1" selected="selected">TV1</option><option value="2">TV2</option><option value="3">TV3</option><option value="4">TV4</option><option value="5">TV5</option><option value="6">TV6</option><option value="7">TV7</option><option value="8">TV8</option><option value="9">Passages</option><option value="10">Résultats</option><option value="11">Mosaïque</option></select><input type="submit" name="BtnAfficher" value="Afficher"><input type="submit" name="BtnAfficher2" value="Aff." onclick="javascript:AfficheConfig();"><br><label class="" for="config">Id Config. : </label><input type="text" name="config" id="config" value="1" size="2" maxlength="2" class="center" readonly="readonly"><br><label class="" for="css">Feuille de style : </label><input type="text" name="css" id="css" value="Suivi-TV.css;" size="20" maxlength="50" readonly="readonly"><br><label class="" for="refresh">Refresh : </label><input type="text" name="refresh" id="refresh" value="1" size="2" maxlength="2" class="center" readonly="readonly" title="Fréquence (sec) de MAJ des pages"><label class="" for="autoscroll">Auto Scroll : </label><input type="text" name="autoscroll" id="autoscroll" value="20" size="2" maxlength="2" class="center" readonly="readonly" title="Fréquence (sec) de scrolling des colonnes"><br><label class="" for="frequence_pub">Page de pub (sec.) : </label><input type="text" name="frequence_pub" id="frequence_pub" value="0" size="2" maxlength="4" class="center" readonly="readonly" title="Fréquence (sec) d'affichage des pages de pub"><br><label class="" for="variante">Variante : </label><input type="text" name="variante" id="variante" value="35" size="2" maxlength="2" class="center" readonly="readonly"><br><label class="" for="nomvariante">Nom variante : </label><input type="text" name="nomvariante" id="nomvariante" value="Incrustation TV Finale" size="20" maxlength="2" class="center" readonly="readonly" title="Variante actuellement affichée"><br><label class="" for="heure">Heure des données affichées : </label><input type="text" name="heure" id="heure" value="11:45:55" size="6" maxlength="8" class="center" readonly="readonly"><br></div><div id="etats"><label class="" for="status">Status : </label><input type="text" name="status" id="status" size="3" maxlength="5" class="center" readonly="readonly" title="Status de la dernière MAJ de la page" value="OK"><label class="" for="timer">Timer : </label><input type="text" name="timer" id="timer" size="3" maxlength="20" class="center" readonly="readonly" title="Durée du timer actuel" value="1"><br><label class="" for="heurevariante">Variante affichée depuis : </label><input type="text" name="heurevariante" id="heurevariante" size="6" maxlength="8" class="center" readonly="readonly"><br><label class="" for="heureok">Heure dernière maj : </label><input type="text" name="heureok" id="heureok" size="6" maxlength="5" class="center" readonly="readonly" value="11:45:55"><br><label class="" for="nbok">Nb de maj OK : </label><input type="text" name="nbok" id="nbok" value="6" size="4" maxlength="5" class="center" readonly="readonly" title="Nb de MAJ sans erreurs"><br><label class="" for="nberreur">Nb d'erreurs de maj : </label><input type="text" name="nberreur" id="nberreur" value="0" size="4" maxlength="5" class="center" readonly="readonly" title="Nb de MAJ avec erreurs"><br><label class="" for="heureerr">En erreur depuis : </label><input type="text" name="heureerr" id="heureerr" size="6" maxlength="5" class="center" readonly="readonly" title="Heure depuis que la MAJ est en erreurs"><br><label class="" for="dureeerreur">Durée en erreur : </label><input type="text" name="dureeerreur" id="dureeerreur" size="6" maxlength="5" class="center" readonly="readonly" title="Durée depuis que la MAJ est en erreurs"><br><img id="btn_close" src="index_fichiers/Croix.png"></div></div></form></div></div><div id="erreurcnx" class="ui-draggable ui-draggable-handle" style="top: -3px; left: 770px;"><div><span>ATTENTION</span><br><span>Liaison coupée avec le serveur.</span><br><span>Les heures et les résultats ne sont plus mis à jour.</span></div></div><div id="animrefresh" style="display: none;"></div><div id="ecran" class="TV1 config_1" typemaj="J"><div id="colonne_1" class="colonne nblignes_1"><div id="suivitv_50" class="bloc_suivitv"><div id="tv-bandeau_50" class="tv-bandeau majauto"><div class="bandeau affparam"><div id="logo-bandeau"></div><div id="titre1" class="titre">Championnats de France de Sprint Orientation</div><div id="titre2" class="titre">Béziers - 30 octobre 2021</div></div></div><div id="tv-chrono_50" class="tv-chrono majauto"></div><div id="tv-fiche_50" class="tv-fiche majauto"><div class="fiche-infos affparam"><div class="dossard"><label>Dossard : </label><span>206</span></div><div class="prenom"><span>Lauriane</span></div><div class="nom"><span>BEAUVISAGE</span></div><div class="club"><label>Club : </label><span>GO78</span></div><div class="depart"><label>Age : </label><span></span></div><div class="info1"><label>CF 2019 : </label><span></span></div><div class="info2"><label>Départ à </label><span>09:14</span></div></div></div><div id="tv-start_50" class="tv-start majauto"></div><div id="tv-result_50" class="tv-result majauto"></div></div></div></div><div id="temp" style="display:none;"></div>
+
+
+
+
+</body></html>

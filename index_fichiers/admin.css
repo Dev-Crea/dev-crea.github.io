@@ -1,0 +1,1068 @@
+
+body
+{
+	margin: 5px 15px 5px 5px;
+}
+
+/*	Style pour les champ de saisie */
+Table#Table_Equipe  , Table#Table_Equipe  
+	{  
+		Xbackground-color: lightblue;
+		display:inline;
+	}
+
+/*	Style pour les champ de saisie */
+Table#Table_Equipe  input , 
+Table#Table_Pointages  input, 
+Table#Table_Equipe  select
+	{  
+		color: indigo;
+		font-weight: bold; 
+		font-size: 12px; 
+		margin : 1px 1px 1px 1px;
+	}
+	
+Table#Table_Equipe  th , 
+Table#Table_Pointages  th
+	{  
+		color: indigo;
+		font-weight: bold; 
+		font-size: 12px; 
+		border-style: outset;
+		border-width: 2px;
+		margin : 1px 1px 1px 1px;
+	}
+
+
+form.liste_boutons	div
+{
+	display: inline;
+}
+
+form.liste_boutons	
+{
+	xdisplay: inline-block;
+	display: inline;
+	padding: 1px 2px 1px 2px;
+	xbackground-color: salmon;
+	xborder: solid 1px;
+	
+}
+form.liste_boutons input[type=submit]
+	{  
+		margin : 1px 1px 1px 1px;
+	}
+
+body  
+	{  
+		font-family: Arial, Helvetica, 		sans-serif; 
+		font-size: 12px; 
+		color: black;
+		background-color: lightgray;
+	}
+
+
+/*	Style pour les boutons */
+.formulaire input[type=submit]
+	{  
+		color: darkred;
+		font-weight: bold; 
+		font-size: 12px; 
+		height: 24px;
+		cursor: pointer;	/*Curseur "main"*/
+		margin : 4px 5px 4px 5px;
+	}
+
+/*	Style pour les boutons de class "petit" */
+input[type=submit].petit,
+button[type=submit].petit
+{  
+	font-size: 10px; 
+	height: 20px;
+}
+
+/* Style pour les bouton "Choisir un fichier" */
+input[type=file]
+{
+	color: red;
+}
+
+/* Objet avec style de bouton */
+.button
+{
+	color: darkred;
+	border-style: outset;
+	border-width: thin;
+	border-color: white;
+	padding: 0px 4px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-weight: bold;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: buttonface;
+}
+
+
+/*	Style pour les cases à cocher */
+.formulaire input[type=checkbox]
+	{  
+		Xfont-size: 4px; 
+		margin : 0px 2px 0px 12px;
+		height: 24px;
+		vertical-align: middle;
+	}
+	
+/* Une check-box a droite du libellé */	
+input[type=checkbox].check_droite
+	{  
+		margin : 0px 12px 0px 2px;
+	}
+
+.Libelle  
+	{  
+		color: dark;
+	}
+
+.debug , .CodeDebug , .Table_debug
+	{  
+	display: block;
+	font-family: "Courier New", Courier, mono; 
+	font-size: 9px; 
+	font-weight: bold; 
+	color: #000000; 
+	background-color: #CCCCCC;
+	padding: 5px;
+	margin: 2px;
+	}
+
+.CodeError, .CodeErreur{
+	display: block;
+	margin: 2px;
+	padding: 10px;
+	background: #eee;
+	color: red;
+}
+
+.NbModif {  
+	font-family: "Courier New", Courier, mono; font-size: 12px; font-weight: bold; 	
+	color: #DD0000; 
+	background-color: #FFFFCC; 
+	padding-right: 10px; padding-left: 10px; padding-top: 1px; padding-bottom: 1px
+	}
+
+	
+.MsgErreur
+{  
+	display: block;
+	font-family: Arial; 
+	font-size: 14px; 
+	font-weight: bold; 	
+	color: red; 
+	background-color: #DDAAAA; 
+	margin: 5px 5px 5px 5px;
+	padding: 5px 10px 5px 10px ;
+	}
+
+.MsgOk
+{  
+	display: block;
+	font-family: Arial; 
+	font-size: 14px; 
+	font-weight: bold; 	
+	color: black; 
+	background-color: lightgreen; 
+	margin: 5px 5px 5px 5px;
+	padding: 5px 10px 5px 10px ;
+	}
+
+.Infos {  
+	font-family: "Courier New", Courier, mono; font-size: 12px; font-weight: bold; 	
+	color: #DD0000; 
+	background-color: #FFFFCC; 
+	padding-right: 10px; padding-left: 10px; padding-top: 1px; padding-bottom: 1px
+	}
+
+.note {  
+	xfont-family: "Courier New", Courier, mono; 
+	font-size: 10px; 
+	color: DarkBlue; 
+	font-style: italic; 
+	padding-right: 5px;
+	}
+
+.commentaire {  
+	font-size: 10px; 
+	font-style: italic; 
+	}
+	
+.rouge {  
+	color:red; 
+	}
+
+h2
+{
+	color: darkred;
+	margin: 5px 0px 0px 0px;
+	padding-left: 10px;
+}
+
+h3
+{
+	color: navy;
+	margin: 5px 0px 5px 10px;
+}
+
+Table#Table_Olive 
+{
+	color: navy;
+	font-family: "Courier New", Courier, mono; 
+	font-size: 12px; 
+	font-weight: normal; 	
+
+	border-style: solid;
+	border-width: 1px;
+	border-collapse: collapse;
+	border-color: black;
+	border-style: solid solid solid solid;		
+	
+	white-space: nowrap;	/* Pas de retour à la ligne en cas de dépassement */
+	overflow: hidden;		/* Masque en cas de dépassement (superposition sinon) */ 
+	table-layout: fixed; 	/* Tailles de colonnes prime sur le contenu */
+	
+}
+
+Table#Table_Olive tr
+{
+	border-style: solid;
+	border-width: 1px;
+	border-collapse: collapse;
+	border-color: #AAA;
+	border-style: solid solid solid solid;		
+}
+
+Table#Table_Olive td
+{
+	padding: 0 2px 0 2px;
+	max-width: 300px;
+	overflow: hidden;		/* Masque en cas de dépassement (superposition sinon) */ 
+}
+	
+Table#Table_Olive .CATEGORIE_COURT
+{
+	min-width: 80px;
+}
+
+Table#Table_Olive .DOSSARD
+{
+	min-width: 30px;
+	font-weight: bold; 	
+	text-align: right;
+}
+
+Table#Table_Olive .NUM_RELAYEUR
+{
+	min-width: 20px;
+	font-weight: bold; 	
+	text-align: left;
+}
+
+Table#Table_Olive .STATUS_RELAYEUR
+{
+	min-width: 30px;
+	text-align: center;
+}
+
+Table#Table_Olive .DOSSARD:before
+{
+	content: "#";	
+}
+
+Table#Table_Olive .NUM_RELAYEUR:before
+{
+	content: ".";	
+}
+
+Table#Table_Olive .NOM_EQUIPE
+{
+	width: 200;
+}
+
+Table#Table_Olive .HEURE_DEPART , Table#Table_Olive .HEURE_ARRIVEE, Table#Table_Olive .TEMPS_RELAYEUR
+{
+	width: 80px;
+	font-style: normal; 	
+	text-align: center;
+}
+
+Table#Table_Olive .STATUS_RELAYEUR , Table#Table_Olive .STATUS_EQUIPE
+{
+	width: 10px;
+	font-weight: bold; 	
+	text-align: center;
+}
+Table#Table_Olive .PLACE_EQUIPE_REL , Table#Table_Olive .PLACE_EQUIPE
+{
+	width: 10;
+	font-style: italic; 	
+	text-align: center;
+}
+
+
+/*--------------------------*/
+/* Tableau récap des BestOf */
+/*--------------------------*/
+
+Table#BestOf
+{
+	color: navy;
+	font-family: arial, Courier, mono; 
+	font-size: 12px; 
+	font-weight: normal; 	
+
+	border-style: outset;		
+	border-width: 2px;
+	border-collapse: collapse;
+	xborder-color: black;
+	
+	white-space: nowrap;	/* Pas de retour à la ligne en cas de dépassement */
+	overflow: hidden;		/* Masque en cas de dépassement (superposition sinon) */ 
+	table-layout: auto; 	
+	
+	padding: 5px;
+	
+}
+Table#BestOf tr
+{
+	xborder-style: 1px solid #AAA;
+	border-style: outset outset inset inset;		
+	border-width: 2px;
+	xborder-collapse: collapse;
+	border-color: #AAA;
+}
+
+Table#BestOf td
+{
+	padding: 0 2px 0 2px;
+	max-width: 200px;
+	overflow: hidden;		/* Masque en cas de dépassement (superposition sinon) */ 
+}
+	
+Table#BestOf td.ID ,
+Table#BestOf th.ID
+{
+	min-width: 30px;
+	text-align: center;
+}
+
+Table#BestOf td.CATEGORIE ,
+Table#BestOf th.CATEGORIE
+{
+	min-width: 80px;
+	text-align: left;
+}
+
+Table#BestOf td.NUM_REL ,
+Table#BestOf th.NUM_REL
+{
+	min-width: 30px;
+	text-align: center;
+}
+
+/* Liste des passages en tête */
+
+#ListeTetes h4 
+{
+	padding-left:10px;
+}
+#ListeTetes h5 
+{
+	padding-left:10px;
+}
+#ListeTetes li 
+{
+	padding-left:30px;
+}
+#ListeTetes li span
+{
+	display: inline-block;
+}
+#ListeTetes span.NumPoste
+{
+	width: 20px;
+	padding-right: 10px;
+	text-align: right;
+}
+#ListeTetes span.Dossard
+{
+	width: 30px;
+	text-align: right;
+	padding-right:10px;
+}
+#ListeTetes span.Puce
+{
+	width: 50px;
+	text-align: right;
+	padding-right:10px;
+}
+#ListeTetes span.LibCat
+{
+	min-width: 100px;
+}
+#ListeTetes span.HeurePtg
+{
+	width: 64px;
+}
+#ListeTetes span.Coureur
+{
+	width: 200px;
+	white-space: nowrap;
+	text-overflow: ellipsis;;
+}
+#ListeTetes span.TempsPtg
+{
+	width: 80px;
+}
+
+
+/*--------------------------------------*/
+/*     Formulaire du module Import      */
+/*--------------------------------------*/
+
+
+input#Btn_Telecharger,
+input#Btn_MiseAJour
+{
+	color:red;
+}
+
+/* Surbrillance*/
+input.active	
+,select.active	
+{
+	background-color: LemonChiffon  ;
+}
+
+/*	Style pour les champ de saisie */
+input.center  
+	{
+		text-align: center;
+	}
+
+input.rouge  
+	{  
+		background-color: LightPink !important;
+	}
+
+label
+{
+	margin-left: 5px;
+}
+
+/*	Style pour les champ de saisie ou une liste déroulante*/
+.formulaire input[type=texte] , 
+.formulaire select
+{  
+	color: green;
+	font-weight: bold; 
+	font-size: 12px; 
+	margin : 2px 10px 2px 0px;
+}
+.formulaire option
+{  
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    max-height: 1em;
+    padding: 0px 0px 0px 0px;
+}
+
+/*	Style pour les champ de saisie désactivé (ne marche pas sous IE) */
+form input[readOnly] ,
+.formulaire  input[readonly]
+{
+	background-color: lightgray;
+	border: 2px inset;
+}
+
+.bloc_detail
+{
+	margin: 2px 0 2px 0;
+}
+	
+/* Texte Indisponible dans le choix du suivi, pour une course individuelle */
+#indisponible
+{
+	color:red;
+	font-style:italic;
+}
+
+/* Image "loading" (en cours de chargement) */
+#loading
+{
+	position: static;
+	display: none;
+	width: 0px;
+	height: 0px;
+	xborder: 1px blue solid;
+	
+}
+#loading img
+{
+	position: relative;
+	top: 60px;
+	left: 320px;
+	width: 40px;
+	height: 40px;
+	xborder: 1px red solid;
+	
+}
+
+/* Champ Code d'accès administrateur */
+#pwd_admin
+{
+	background-color: LightCoral ;
+}
+
+/* Bloc d'option pour simulation dans Import.php */
+#bloc_simul
+{
+	xbackground-color: LightCoral ;
+	xborder: 1px red solid;
+}
+#Frm_Upload div
+{
+	xborder: 1px salmon solid;
+}
+/* Bouton d'action Javascript */
+input.btn_action
+{
+	font-style: italic;
+	font-size: 11px;
+}
+
+/***********************************/
+/* Font pour bibliothèque d'icones */
+/***********************************/
+
+@font-face {
+    font-family: 'IcoMoon-Free';
+    src: url('../images/IcoMoon-Free.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'IcoMoon-Free' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    
+    /* Enable Ligatures ================ */
+    letter-spacing: 0;
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    -o-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-cog:before {
+    content: "\e994";
+}
+.icon-cogs:before {
+    content: "\e995";
+}
+
+#BtnParam
+{
+	font-size: 16px;
+}
+
+.TexteInfo
+{
+	padding: 10px 10px 10px 10px;
+}
+
+/*--------------*/
+/* MODULE ADMIN */
+/*--------------*/
+
+/* Bouton n° de dossard dans la recherche textuelle */
+.formulaire input.btn_dossard	
+{
+	margin: 0 0 0 0;
+	height: 20px;
+}
+
+/* Récapitulatif du Calcul des montées/Descente du CFC  */
+
+table.resume_cfc
+{
+	font-family: courier;
+	color: maroon;
+}
+table.resume_cfc tr
+{
+	line-height: 12px;
+}
+
+table.resume_cfc td.num_club
+{
+	min-width: 50px;
+	text-align:center;
+	font-weight:bold;
+}
+table.resume_cfc td.code
+{
+	padding-left: 10px;
+	font-weight:bold;
+}
+table.resume_cfc td.rang
+{
+	text-align:right;
+	padding-right: 2px;
+}
+table.resume_cfc td.division
+{
+	min-width: 30px;
+}
+table.resume_cfc td.msg
+{
+	font-style:italic;
+}
+
+
+/*------------------------------*/
+/* CONFIGURATION DES AFFICHAGES */
+/*------------------------------*/
+
+/* Colorisation des configuration actives ou récente */
+
+#FormListeConfig div.recent input[type=texte]
+{
+	background-color: #CCFFCC;	/* vert pale */
+}
+
+#FormListeConfig div.anomalie input[type=texte]
+{
+	background-color: #FFCCCC;	/* rose pale */
+}
+
+/* Taille du bouton de changement de variante (affichage détaillé des configurations) */
+input.btn_chgvar
+{
+	width:60px;
+}
+
+#FormChoixModifConfig button.btn_dupl_var
+{
+	margin-right:5px;
+	padding:0 0 0 0;
+	width:25px;
+	xoutline: 1px solid red;
+}
+#FormModifVariante button.btn_supp_bloc 
+{
+	xmargin-top:0px;
+	margin-right:5px;
+	padding:0 0 0 0;
+	width:25px;
+	xoutline: 1px solid red;
+}
+
+/*************************************************************************/
+/* Dans le formulaire de Configuration des variantes / blocs de résulats */
+/*************************************************************************/
+
+#blocs_resultats span
+{
+	padding-left:5px;
+	padding-right:5px;
+}
+#blocs_resultats  select
+{  
+	xmargin : 2px 10px 2px 0px;
+	margin-right : 5px;
+}
+
+/* Boutons de déplacement des blocs dans une variante */
+#blocs_resultats .img_arrows_vert
+{
+	padding-left:15px;
+	padding-right:5px;
+	background-image: url("../jquery/images/ui-icons_c47a23_256x240.png");
+	background-position: -126px -48px;
+	width:16px;
+	height:16px;
+	xborder: 1px red solid;	
+}
+
+/* Boutons de déplacement des variantes dans une configuration */
+#bloc_variantes .img_arrows_vert
+{
+	display:inline-block;
+	padding-left:5px;
+	background-image: url("../jquery/images/ui-icons_c47a23_256x240.png");
+	background-position: -126px -48px;
+	width:16px;
+	height:16px;
+	xborder: 1px red solid;	
+}
+
+ #blocs_resultats { list-style-type: none; margin: 0; padding: 0; }
+ #bloc_variantes { list-style-type: none; margin: 0; padding: 0; }
+
+#blocs_resultats span.btn_aide
+{
+		color: darkred;
+		xfont-size: 12px; 
+		height: 16px;
+		cursor: pointer;	/*Curseur "main"*/
+		margin : 0px 5px 0px 0px;
+		padding-left: 2px;
+		padding-right: 2px;
+		xoutline: gray outset 1px;
+		-webkit-appearance: push-button;
+}
+
+span.navigation 
+{
+	display: bloc;
+	border: 1px solid red;
+	padding:0;
+	width : 26px
+}
+input.btn_move
+{
+	xheight : 1px;
+	font-size : 10px;
+	font-weight: bold;
+	width: 20px;
+	height:19px;
+}
+
+/* Champ N° d'ordre */
+.formulaire input.ordre
+{
+	width: 16px;
+	margin-right:0;
+}
+
+/* Bloc de choix multiple des catégories */
+#choix_categories
+{
+	position: absolute;
+	top: 200px; left: 200px;
+	width: auto;	height: auto;
+	
+	padding: 5px 10px 10px 10px;
+	
+	background-color: rgba(192, 192, 192, 0.9);;
+	border: 1px solid dimgray;
+	border-radius: 5px;	/* Coins arrondis */
+	box-shadow: #363636 2px 3px 3px 0px;	/* Ombrage des boites : Color, Dec.Horz, Dec.Vert, Flout., Elarg. */
+}
+#liste_categories
+{
+	-moz-column-count: 2;
+	-webkit-column-count: 2;	/* Affichage sur 2 colonnes */
+	column-count: 2;
+	xborder: 1px solid red;
+}
+#choix_categories input[type="button"]
+{
+	margin: 10px 3px 0 3px;
+}
+
+/* Note dans le paramétrage d'un bloc pour Contrôle au départ */
+span.param_controle
+{
+	font-style: italic;
+	font-weight: bold;
+	color: brown;	
+}
+
+/* Colorisation en Vert lorsque le timer de MAJ auto est actif*/
+#FrequenceMajAuto.actif
+{
+	background-color: #CCFFCC;	/* vert pale */
+}
+
+
+/* Bloc d'aide sur les types de bloc */
+#AideTypesBlocs
+{
+	display : block;
+	position: absolute;
+	top: 50px;
+	right:50px;
+	width: 400px;
+	padding:5px 5px 15px 5px;
+	border: 1px solid black;
+	background-color: moccasin;
+	box-shadow: #363636 2px 3px 3px 0px;	/* Ombrage des boites : Color, Dec.Horz, Dec.Vert, Flout., Elarg. */
+	border-radius: 5px;	/* Coins arrondis */
+}
+#AideTypesBlocs H4
+{
+	margin: 10px 2px 4px 10px;;
+}
+#AideTypesBlocs div
+{
+	padding-left: 15px;
+	padding-right: 10px;
+	font-style: italic;
+}
+
+#bloc_variantes span.ui-icon ,
+#FormChoixModifConfig span.ui-icon,
+#FormVariantesCourse span.ui-icon,
+#FormulaireRelayeur span.ui-icon
+{
+	display:inline-block;
+}
+
+#FormChoixModifConfig #BtnTout
+{
+	position: absolute;
+	left: 690px;
+}
+#FormVariantesCourse #BtnTout
+{
+	position: absolute;
+	left: 790px;
+}
+
+/***************************/
+/* Etat des configurations */
+/***************************/
+
+#EtatRecapitulatif
+{
+	background-color: white;
+	padding: 5px 5px 5px 5px;
+}
+
+#EtatRecapitulatif .LibConfig
+{
+	font-size: 14px;
+	font-weight:bold;
+	padding: 20px 0px 10px 10px;
+}
+
+#EtatRecapitulatif div.BlocConfig
+{
+	xwidth: 400px;
+	xmargin-left: 15px;
+	xborder: 1px solid darkgray;
+}
+
+#EtatRecapitulatif .LibVariante
+{
+	font-size: 12px;
+	font-weight:bold;
+	color: darkblue;
+	padding: 5px 15px 5px 15px;
+}
+
+#EtatRecapitulatif div.BlocVariante
+{
+	xwidth: 800px;
+	color: darkblue;
+	margin-left: 30px;
+	xborder: 1px solid darkblue;
+}
+
+#EtatRecapitulatif div.BlocResultat
+{
+	xwidth: 600px;
+	color: darkgreen;
+	margin-left: 45px;
+	padding: 2px 0px 2px 0px;
+	xborder: 1px solid darkgreen;
+}
+
+#EtatRecapitulatif div.BlocResultat span.OrdreBloc
+{
+	display: inline-block;
+	min-width: 20px;
+	xborder: 1px solid darkgreen;
+}
+#EtatRecapitulatif div.BlocResultat span.TypeBloc
+{
+	display: inline-block;
+	min-width: 70px;
+	width: 70px;
+	max-width: 70px;
+	padding-right: 20px;
+	white-space: nowrap;	/* Pas de retour à la ligne en cas de dépassement */
+	Xoverflow: hidden;		/* ! Le overflow génère un bug de décalage vertical ! */
+	text-overflow:ellipsis;  /* Caractères de substitution en cas overflow (ellipsis, ...)*/
+	xoutline: 1px solid red;
+}
+#EtatRecapitulatif div.BlocResultat .LibelleCategorie
+{
+	display: inline-block;
+	min-width: 100px;
+	width: 100px;
+	max-width: 100px;
+	Xoverflow: hidden;		/* ! Le overflow génère un bug de décalage vertical ! */
+	text-overflow:ellipsis;  /* Caractères de substitution en cas overflow (ellipsis, ...)*/
+	xborder: 1px solid darkgreen;
+}
+#EtatRecapitulatif div.BlocResultat span.PositionBloc
+{
+	display: inline-block;
+	min-width: 70px;
+	width: 70px;
+	max-width: 70px;
+	Xoverflow: hidden;		/* ! Le overflow génère un bug de décalage vertical ! */
+	white-space: nowrap;	/* Pas de retour à la ligne en cas de dépassement */
+	text-overflow:ellipsis;  /* Caractères de substitution en cas overflow (ellipsis, ...)*/
+	xborder: 1px solid darkgreen;
+}
+
+#EtatRecapitulatif div.BlocResultat span.NbCoureurs,
+#EtatRecapitulatif div.BlocResultat span.NbEquipes
+{
+	display: inline-block;
+	min-width: 70px;
+	width: 70px;
+	max-width: 70px;
+	text-align: right;
+	text-overflow:ellipsis;  /* Caractères de substitution en cas overflow (ellipsis, ...)*/
+	white-space: nowrap;	/* Pas de retour à la ligne en cas de dépassement */
+	text-overflow:ellipsis;  /* Caractères de substitution en cas overflow (ellipsis, ...)*/
+	xborder: 1px solid darkgreen;
+}
+
+#EtatRecapitulatif .Libelle
+{
+	font-size: 10px;
+	padding-left: 15px;
+}
+#EtatRecapitulatif .Valeur
+{
+	font-size: 10px;
+	font-weight:bold;
+}
+
+#EtatRecapitulatif span
+{
+	xoutline: 1px solid salmon;	/* Pour DEBUG */
+}
+
+/*********************/
+/* Liste des courses */
+/*********************/
+
+#FormListeCourses div.entete input
+{
+	color: darkred;
+}
+#FormListeCourses div.entete input.publique 
+{
+	width: 60px;
+	margin: 0 0 0 0;
+}
+#FormListeCourses input.publique
+{
+	width: 58px;
+	margin: 0 5px 0 5px;
+}
+
+
+/*--------------------------------*/
+/* MODULE D'AFFICHAGE AUTOMATIQUE */
+/*--------------------------------*/
+
+div.CaseConfig 
+{
+	display: inline-block;
+	width: 260px;
+	max-width: 260px;
+	min-height: 100px;
+	margin: 5px 5px 5px 5px;
+	vertical-align: top;
+	
+	background-color: rgba(192, 192, 192, 0.9);;
+	border-radius: 5px;	/* Coins arrondis */
+	box-shadow: #363636 2px 3px 3px 0px;	/* Ombrage des boites : Color, Dec.Horz, Dec.Vert, Flout., Elarg. */
+	
+	xborder: 1px red solid;
+}
+
+div.CaseConfig  div.LibelleConfig 
+{
+	font-size: 1.4em;
+	font-weight:bold;
+	color: green;
+	text-align:center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+div.CaseConfig  div.LibelleVariante 
+{
+	font-size: 1.0em;
+	font-weight:bold;
+	color: darkred;
+	text-align:center;
+	xpadding-top: 10px;
+}
+
+div.CaseConfig  div.VarianteInactive
+{
+	color: dimgray;
+}
+
+div.light
+{
+	background-color: lightgreen;
+}
+#CaseModifConfig 
+{
+	border: gray solid 1px;
+}
+#CaseModifConfig div.LibelleConfig 
+{
+	color: darkblue;
+	xtext-align:center;
+	padding-top: 30px;
+	xpadding-bottom: 10px;
+}
+
+#test 
+{ 
+	display:bloc;
+	background-color: lightgreen;
+	xmax-width: 100px;
+	xmax-height:200px;
+	font-size : 16px;
+	
+}
+
+/*--------------------------------*/
+/*     MENU GENERAL (menu.php)    */
+/*--------------------------------*/
+
+#titre-olive
+{
+	height: 50px;
+	background-image: url("../images/Logo OLive-2.png") ;
+	background-repeat: no-repeat;
+	/* background-position: center; */
+	background-size: 205px;
+	background-position: 0px 0px;
+	xbackground-color: lightgray;
+}

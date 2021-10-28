@@ -1,0 +1,235 @@
+
+	/*******************************************/
+	/* Styles en fonction du Status du coureur */
+	/*******************************************/
+	
+	/* 1er relayeur, non encore parti */ 
+	XXXX.depart
+	{  
+		color: FireBrick; 	/* Rouge foncé */
+		xbackground: #FFC4C4;
+	}
+	
+	/* Coureur non encore parti */ 
+	td.wait
+	{  
+		color: #606060; 	/* Gris foncé */
+		xbackground: #FFC4C4;
+	}
+	
+	/* Coureur en course */ 
+	td.temps_run
+	{  
+		font-style: italic;
+		background: #B4FFB4;	/* vert clair*/
+		xfont-size: 90%;
+		text-align:center;
+		Xpadding : 0 0 0 0 ; /* top, right, bottom, left */
+	}
+	
+	/* Temps total équipe en course */ 
+	tr.eqrun td.total_tps
+	{  
+		font-style: italic;
+		background: #B4FFB4;	/* vert clair*/
+		xfont-size: 90%;
+		xtext-align:center;
+		Xpadding : 0 0 0 0 ; /* top, right, bottom, left */
+	}
+	
+	/* Coureur non-classé */ 
+	td.NC
+	{  
+		color: #050505;	/* Gris foncé */
+		color: #A00000;	/* Rouge foncé*/
+	}
+
+	/* Status d'équipe ou de coureur */ 
+	td.place_nc
+	{  
+		font-weight: bold;
+		color: #A00000;	/* Rouge foncé*/
+		Xfont-style: italic;
+		Xtext-decoration: line-through;	/* Barré */
+	}
+	
+
+	/*-------------------*/
+	/* Status des lignes */
+	/*-------------------*/
+	
+	/* Coureur/Equipe en attente */ 
+	.tableau_indiv tr.wait ,
+	.tableau_intermediaires tr.wait ,
+	.tableau_equipe tr.wait
+	{  
+		xcolor: black;
+		font-style: normal;
+		xbackground: #FFFECE;	/* Jaune pale */
+		background-image: linear-gradient( LemonChiffon ,#fbef7e );	/* Dégradé jaune clair */
+		background-color: #fbef7e;		/* Jaune */
+	}
+	
+	/* Coureur/Equipe en course */ 
+	.tableau_indiv tr.run ,
+	.tableau_intermediaires tr.run ,
+	.tableau_equipe tr.run
+	{  
+		background: #B4FFB4;	/* vert clair*/
+		background: linear-gradient(#CCFFCC, #B4FFB4);		/* Vert clair dégradé */
+	}
+
+	/* Temps de passage partiel d'un Coureur d'une Equipe en course */ 
+	.tableau_indiv tr.partiel ,
+	.tableau_equipe tr.partiel
+	{  
+		background: #B4FFB4;	/* vert clair*/
+		font-style: italic;
+	}
+
+	/* Coureur/Equipe arrivée */ 
+	.tableau_indiv tr.arrivee ,
+	.tableau_intermediaires tr.arrivee ,
+	.tableau_equipe tr.arrivee
+	{  
+		font-weight: bold;
+		background: linear-gradient(#f0f0f0,#ddd );		/* Gris clair dégradé */
+		background-color: #ddd ;					/* Couleur si dégradé non pris en charge */
+	}
+
+	/* Coureur/Equipe arrivée mais NC */ 
+	.tableau_indiv tr.NC ,
+	.tableau_intermediaires tr.NC ,
+	.tableau_equipe tr.NC
+	{  
+		font-weight: bold;
+		xbackground: #FFFECE;	/* Jaune pale */
+		color: #A00000;	/* Rouge foncé*/
+	}
+
+	
+	/*******************************/
+	/*    Styles pour les relais   */
+	/*******************************/
+
+	.tableau_relais tr.ligne			/* Ligne, tant que l'équipe n'est pas arrivée */
+	{
+		xborder-style: solid 0px gray;
+		box-shadow: 0px 0px 10px rgba(0,0,0,.6);	/* Ombrage vertical*/
+		background-image: linear-gradient( LightYellow  , LemonChiffon );	/* Dégradé jaune pale */
+		background-color: LemonChiffon;		/* Jaune */
+	}
+	
+	.tableau_relais tr.arrivee			/* Ombrage des lignes des équipes arrivées */
+	{  
+		box-shadow: 0px 0px 10px rgba(0,0,0,.4);		/* Ombrage vertical*/
+		background: linear-gradient(#f0f0f0,#ddd );		/* Gris clair dégradé */
+		background-color: #ddd ;					/* Couleur si dégradé non pris en charge */
+	}
+	
+	/**************************************/
+	/* Styles pour Suivi passage au poste */
+	/**************************************/
+	
+	table.passages th.filtre
+	{
+		color: crimson;
+	}
+	
+	/********************************************/
+	/* Styles en fonction du Status de l'equipe */
+	/********************************************/
+	
+	/* 1er relayeur, non encore parti */ 
+	tr.eqdepart
+	{  
+		color: #AAAAAA;
+		xbackground: #FFC4C4;
+	}
+	
+	/* Equipe en course */ 
+	tr.eqrun
+	{  
+		font-style: italic;
+	}
+	
+	/* Equipe entièrement arrivée */ 
+	tr.eqarrivee
+	{  
+		font-weight: bold;
+		background: #FFFECE;
+	}
+	
+	/* Mise en parenthèse des coureurs en course          */
+	/* classe "temps" d'une <td>, fils d'une classe "run" */
+/*
+	tr.run td.temps:before, tr.eqrun td.total_tps:before, td.temps_run:before  {content: "(";	}
+	tr.run td.temps:after , tr.eqrun td.total_tps:after, td.temps_run:after {content: ")";	}
+*/
+	tr.run td.temps, tr.eqrun td.total_tps, td.temps_run
+	{
+		color:dimgray;	/* Gris */
+	}
+	/* Dans les relais, on propose la place estimée (pas pour les indiv)*/
+	.tableau_equipe tr.run td.place:before {content: "(";	}
+	.tableau_equipe tr.run td.place:after {content: ")";	}
+	
+	/* Mise en parenthèse des heure "H - X" des 1er relayeur*/
+	tr.depart td.temps, td.depart {font-style: italic;	}
+	tr.depart td.temps:before , td.depart:before {content: "("; }
+	tr.depart td.temps:after , td.depart:after {content: ")";	}
+
+	/* Status de coureur */ 
+	td..PM , td..DS, td..NC, td.NP
+	{  
+		font-weight: bold;
+		color:red;
+	}
+
+
+	/* Mise en surbrillance des équipes ou coureurs avec une arrivée récente ou très récente*/
+	/* Arrivée très récente */
+	table.tableau_relais tr.recent1 ,	
+	table.tableau_categorie tr.recent1 ,	
+	table.tableau_indiv     tr.recent1 ,	
+	table.tableau_intermediaires     tr.recent1 ,	
+	table.tableau_partiel   tr.recent1	
+	{  
+		background-color: #ffaaaa;	/* Rose pale */
+		background: linear-gradient(#ffcccc,#ffaaaa );		
+	}
+	/* Arrivée récente */
+	table.tableau_relais tr.recent2 ,	
+	table.tableau_categorie tr.recent2 ,	
+	table.tableau_indiv     tr.recent2 ,	
+	table.tableau_intermediaires     tr.recent2 ,	
+	table.tableau_partiel   tr.recent2	
+	{  
+		background-color: #ffcccc;	/* Rose très pale */
+		background: linear-gradient(#ffe6e6,#ffcccc );		
+	}
+
+		
+	/* Clignotement */
+	@-webkit-keyframes blink {80% {opacity:0.0;}}
+	@-moz-keyframes blink {80% {opacity:0.0;}}
+	@-ms-keyframes blink {80% {opacity:0.0;}}
+	@-o-keyframes blink {80% {opacity:0.0;}}
+
+	.blink { -webkit-animation:blink 1s steps(1,end) 0s infinite }	/* Class "blink" pour clignotement*/
+	
+	
+	/* Le status clignote lorsque le Contrôle au départ à eu lieu */
+	tr.ctrl td.temps ,
+	tr.ctrl td.status 
+	{ 
+		-webkit-animation:blink 2s steps(1,end) 0s infinite; /* clignotement*/
+		font-weight:bold;
+	}	
+
+	/* Le status clignote lorsque le coureur est arrivé, mais n'a pas validé sa puce */
+	xtr.arriveex td.status 
+	{ 
+		-webkit-animation:blink 2s steps(1,end) 1s infinite; /* clignotement*/
+	}	
+
