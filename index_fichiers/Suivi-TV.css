@@ -4,11 +4,6 @@
 /*                                                    */
 /******************************************************/
 
- @font-face {
-  font-family: Arial;
-  src: url(ARIAL.TTF);
-}
-
 body
 {
 	background-color: rgba(0,0,0,0);	/* Fond blanc avec transparence totale */
